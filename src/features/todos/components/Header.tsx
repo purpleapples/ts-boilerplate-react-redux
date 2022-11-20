@@ -2,10 +2,11 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Header.module.css';
 import { useAppDispatch } from '../../../hooks/useAppDispatch';
-import { toggleModal } from '../../modal/modalSlice';
+import { toggleModal } from '../../../components/modals/modalSlice';
 
 export const Header = ({ hasTodos }: { hasTodos: boolean }): JSX.Element => {
   const dispatch = useAppDispatch();
+  
   return (
     <React.Fragment>
       {!hasTodos && (

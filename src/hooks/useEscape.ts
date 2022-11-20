@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useAppSelector } from './useAppSelector';
-import { isOpen } from '../features/modal/modalSlice';
+import { isOpen } from '../components/modals/modalSlice';
 
 export const useEscape = () => {
   const isModalOpen = useAppSelector(isOpen);

@@ -3,12 +3,18 @@ import App from './App';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { store } from './config/store';
-import './index.styles.css';
-
+import styles from './index.module.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { CookiesProvider } from 'react-cookie';
 const root = createRoot(document.getElementById('root'));
-
-root.render(
+console.log('start');
+console.log(styles.html);
+root.render(  
   <Provider store={store}>
-    <App />
+    <Router>
+      <CookiesProvider>
+        <App />
+      </CookiesProvider>
+    </Router>
   </Provider>
 );

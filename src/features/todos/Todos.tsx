@@ -3,7 +3,7 @@ import styles from './Todos.module.css';
 import { selectTodos } from './todosSlice';
 import { Header } from './components/Header';
 import { useEscape } from '../../hooks/useEscape';
-import { isOpen, toggleModal } from '../modal/modalSlice';
+import { isOpen, toggleModal } from '../../components/modals/modalSlice';
 import { editTodo, deleteTodo } from './todosSlice';
 import { useAppDispatch } from '../../hooks/useAppDispatch';
 import { useAppSelector } from '../../hooks/useAppSelector';

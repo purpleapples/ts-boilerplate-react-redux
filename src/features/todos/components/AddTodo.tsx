@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import styles from './AddTodo.module.css';
 import { useAppDispatch } from '../../../hooks/useAppDispatch';
 import { addTodo } from '../todosSlice';
-import { toggleModal } from '../../modal/modalSlice';
+import { toggleModal } from '../../../components/modals/modalSlice';
 
 interface Todo {
   id: string;

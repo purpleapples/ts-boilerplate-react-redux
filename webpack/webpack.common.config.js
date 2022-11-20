@@ -26,7 +26,7 @@ module.exports = {
       ],
     }),
     new HtmlWebpackPlugin({
-      title: 'Todos',
+      title: 'frontend',
       template: `${paths.public}/index.html`,
       filename: 'index.html',
     }),
@@ -52,6 +52,7 @@ module.exports = {
           transpileOnly: true,
         },
       },
+
     ],
   },
   resolve: {

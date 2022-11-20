@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { isOpen } from '../features/modal/modalSlice';
+import { isOpen } from '../components/modals/modalSlice';
 import { useAppSelector } from '../hooks/useAppSelector';
 
 export const useIsClickOutside = (initialState: boolean) => {

@@ -1,12 +1,12 @@
 import * as React from 'react';
 import styles from './Modal.module.css';
-import { AddTodo } from '../todos/components/AddTodo';
-import { isOpen, toggleModal } from '../modal/modalSlice';
+import { AddTodo } from '../../features/todos/components/AddTodo';
+import { isOpen, toggleModal } from './modalSlice';
 import { useAppDispatch } from '../../hooks/useAppDispatch';
 import { useAppSelector } from '../../hooks/useAppSelector';
-import { selectTodos } from '../todos/todosSlice';
-import { resetEdit } from '../todos/todosSlice';
-import { useIsClickOutside } from '.././../hooks/useClickOutside';
+import { selectTodos } from '../../features/todos/todosSlice';
+import { resetEdit } from '../../features/todos/todosSlice';
+import { useIsClickOutside } from '../../hooks/useClickOutside';
 
 const Modal = (): JSX.Element => {
   const dispatch = useAppDispatch();
