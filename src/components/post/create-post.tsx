@@ -11,6 +11,7 @@ import {
     SubmitHandler,
     useForm,
   } from 'react-hook-form';
+  import React from 'react'
   import { object, string, TypeOf, z } from 'zod';
   import { zodResolver } from '@hookform/resolvers/zod';
   import FileUpload from '../FileUpload/FileUpload';

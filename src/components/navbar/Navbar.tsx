@@ -25,6 +25,7 @@ const Navbar = (): JSX.Element => {
       <nav className={styles.container}>
       <Link to='/'>Home</Link>      
       <Link to='login'>Login</Link>
+      <Link to='table'>table</Link>
       
       {/* <Link to="/"> Home</Link>
       <Link to="/"> Home</Link> */}
