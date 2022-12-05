@@ -36,3 +36,24 @@
     created_at: string;
     updated_at: string;
   }
+export interface ItableRowstatus {
+    pk:number;
+    obj: object | null;
+  }
+
+export interface ItableData {
+    data: object[]|null;
+    columnsInfo: object[]|null;
+    visiableAttributes: Array<ItableRowstatus>|null;
+    hiddenAttributes: object[]|null;    
+    page:Number;
+    isInput:boolean;
+}
+export interface ItableColumn {
+  text:string;
+  index:number;
+  url:string|null;
+  type:string|null;
+  max_length:number;
+
+}

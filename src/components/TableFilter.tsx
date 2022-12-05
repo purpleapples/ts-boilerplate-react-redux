@@ -7,11 +7,18 @@ import React from 'react'
 // - filter rows<list:object> : 
 //   - name, create datalist url, column data type, index, col width
 
-const TableFilter = (columnInfo) => {
+const TableFilter = ({columnsInfo}) => {
+
 
     return (
         <>
-        <thead></thead>
+        <thead><tr><th>123</th></tr>
+            {/* for (let i = 0; i < columnsInfo.length; i++){
+                <tr key={0}>
+                    <th></th>
+                </tr>
+            } */}
+        </thead>
         </>
     )
 }

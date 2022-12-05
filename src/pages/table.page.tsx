@@ -1,35 +1,24 @@
 import { Box, Container } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import { object, string, TypeOf } from 'zod';
-
 import React from 'react';
 import { LoadingButton as _LoadingButton } from '@mui/lab';
-import React from 'react';
+import CustomTable from '../components/CustomTable';
+import { ItableData, ItableRowstatus } from '../types/types';
 
 
-const LoadingButton = styled(_LoadingButton)`
-  padding: 0.6rem 0;
-  background-color: #f9d13e;
-  color: #2363eb;
-  font-weight: 500;
-  &:hover {
-    background-color: #ebc22c;
-    transform: translateY(-2px);
-  }
-`;
-
-const loginSchema = object({
-  email: string()
-    .min(1, 'Email address is required')
-    .email('Email Address is invalid'),
-  password: string()
-    .min(1, 'Password is required')
-    .min(8, 'Password must be more than 8 characters')
-    .max(32, 'Password must be less than 32 characters'),
-});
-
-export type LoginInput = TypeOf<typeof loginSchema>;
-
+let data = new Array<object>();
+let columnsInfo = new Array<object>();
+let visiableAttributes= new Array<ItableRowstatus>();
+let hiddenAttributes = new Array<object>();
+let page = 1;
+let isInput = false;
+const tableInitData:ItableData = {
+  data: data,
+  columnsInfo: columnsInfo,
+  visiableAttributes: visiableAttributes,
+  hiddenAttributes: hiddenAttributes,
+  page: page,
+  isInput: isInput,
+}
 const TablePage = () => {
   
   return (
@@ -41,6 +30,7 @@ const TablePage = () => {
         alignItems: 'center',
         height: '100vh',
         
+        
       }}
     >
       <Box
@@ -49,22 +39,10 @@ const TablePage = () => {
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
+          background:'yellow',
         }}
-      >        
-      <table>
-        <thead>
-          <tr>
-            <th>col1</th>
-            <th>col2</th>
-          </tr>          
-        </thead>
-        <tbody>
-          <tr>
-            <td>td1</td>
-            <td>td2</td>
-          </tr>
-        </tbody>
-      </table>
+      >
+      <CustomTable tableInitData={tableInitData} TableFilter={null} />
         
       </Box>
     </Container>
