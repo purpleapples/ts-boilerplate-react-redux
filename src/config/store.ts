@@ -7,6 +7,8 @@ import accountReducer from '../features/account/AccountSlice';
 import postReducer from '../features/post/postSlice';
 import modalReducer from '../components/modals/modalSlice';
 import todoReducer from '../features/todos/todosSlice';
+
+
 export const store = configureStore({
   reducer: {
     [authApi.reducerPath]: authApi.reducer,

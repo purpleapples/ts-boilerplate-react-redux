@@ -16,11 +16,7 @@ import {
     baseUrl,
   });
   
-  const customFetchBase: BaseQueryFn<
-    string | FetchArgs,
-    unknown,
-    FetchBaseQueryError
-  > = async (args, api, extraOptions) => {
+  const customFetchBase: BaseQueryFn<string | FetchArgs, unknown, FetchBaseQueryError> = async (args, api, extraOptions) => {
     // wait until the mutex is available without locking it
     await mutex.waitForUnlock();
     let result = await baseQuery(args, api, extraOptions);

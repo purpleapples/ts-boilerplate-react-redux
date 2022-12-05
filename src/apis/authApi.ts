@@ -20,11 +20,8 @@ export const authApi = createApi({
           };
         },
       }),
-      loginUser: builder.mutation<
-        { access_token: string; status: string },
-        LoginInput
-      >({
-        query(data) {
+      loginUser: builder.mutation<{ access_token: string; status: string }, LoginInput>({
+          query(data) {
           return {
             url: 'auth/login',
             method: 'POST',
