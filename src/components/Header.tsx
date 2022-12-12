@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 import { LoadingButton as _LoadingButton } from '@mui/lab';
 import PostModal from './modals/post.modal';
 import CreatePost from './post/create-post';
+import React from 'react';
 
 const LoadingButton = styled(_LoadingButton)`
   padding: 0.4rem;

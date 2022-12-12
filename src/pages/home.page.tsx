@@ -5,6 +5,7 @@ import FullScreenLoader from '../components/FullScreenLoader';
 import Message from '../components/Message';
 import PostItem from '../components/post/post.component';
 import { useGetAllPostsQuery } from '../apis/postApi';
+import React from 'react';
 
 const HomePage = () => {
   const { isLoading, isError, error, data: posts } = useGetAllPostsQuery();
