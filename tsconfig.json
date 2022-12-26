@@ -11,6 +11,8 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "noImplicitAny": true,
+    "skipLibCheck": true,
+    "noImplicitThis": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "allowSyntheticDefaultImports": true,

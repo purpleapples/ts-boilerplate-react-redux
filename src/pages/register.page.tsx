@@ -9,6 +9,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useRegisterUserMutation } from '../apis/authApi';
 import { LoadingButton as _LoadingButton } from '@mui/lab';
 import { toast } from 'react-toastify';
+import React from 'react';
 
 const LoadingButton = styled(_LoadingButton)`
   padding: 0.6rem 0;
@@ -116,22 +117,6 @@ const RegisterPage = () => {
           flexDirection: 'column',
         }}
       >
-        <Typography
-          textAlign='center'
-          component='h1'
-          sx={{
-            color: '#f9d13e',
-            fontSize: { xs: '2rem', md: '3rem' },
-            fontWeight: 600,
-            mb: 2,
-            letterSpacing: 1,
-          }}
-        >
-          Welcome to CodevoWeb!
-        </Typography>
-        <Typography component='h2' sx={{ color: '#e5e7eb', mb: 2 }}>
-          Sign Up To Get Started!
-        </Typography>
 
         <FormProvider {...methods}>
           <Box
@@ -147,18 +132,14 @@ const RegisterPage = () => {
               borderRadius: 2,
             }}
           >
-            <FormInput name='name' label='Full Name' />
-            <FormInput name='email' label='Email Address' type='email' />
-            <FormInput name='password' label='Password' type='password' />
+            <FormInput name='name' label='이름' />
+            <FormInput name='email' label='Email 주소' type='email' />
+            <FormInput name='password' label='비밀번호' type='password' />
             <FormInput
               name='passwordConfirm'
-              label='Confirm Password'
+              label='비밀번호 재확인'
               type='password'
-            />
-            <Typography sx={{ fontSize: '0.9rem', mb: '1rem' }}>
-              Already have an account?{' '}
-              <LinkItem to='/login'>Login Here</LinkItem>
-            </Typography>
+            />            
 
             <LoadingButton
               variant='contained'
@@ -168,7 +149,7 @@ const RegisterPage = () => {
               type='submit'
               loading={isLoading}
             >
-              Sign Up
+              가입
             </LoadingButton>
           </Box>
         </FormProvider>

@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { RegisterInput } from '../pages/register.page'
+import { RegisterInput } from '../pages/register.page';
 import customFetchBase from './customFetchBase';
 import { GenericResponse,  IResetPasswordRequest } from '../types/types';
 import { LoginInput } from '../pages/login.page';
@@ -33,7 +33,7 @@ export const authApi = createApi({
           try {
             await queryFulfilled;
             await dispatch(accountApi.endpoints.getMe.initiate(null));
-          } catch (error) {}
+          } catch (error) {alert(error);}
         },
       }),
       logoutUser: builder.mutation<void, void>({
