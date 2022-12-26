@@ -1,4 +1,5 @@
 import React, {useMemo} from "react";
+import style from './table.module.css';
 import {useTable, useFilters, TableInstance, UsePaginationInstanceProps, UseSortByInstanceProps, UsePaginationState} from 'react-table';
 import {matchSorterFn} from  '../../func/etc';
 
@@ -17,11 +18,12 @@ import {matchSorterFn} from  '../../func/etc';
     const tabledData = useMemo(()=> data, [data]);
     const tableColumns = useMemo(()=> columns, [columns]);    
 
+
 const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({ columns, data });    
     
     return (
-        <table {...getTableProps()}>
-        <thead>
+        <table {...getTableProps()} className={style.defaultTable}>
+        <thead >
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               { headerGroup.headers.map((column) => (

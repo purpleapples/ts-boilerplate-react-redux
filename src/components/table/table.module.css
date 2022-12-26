@@ -1,0 +1,82 @@
+
+.overflow-y.md .defaultTable thead{
+    position:sticky;
+    /* sticky 속성을 위해선 position coordination value 하나 이상 필수*/
+    top:0;
+}
+.table-width-2500{
+    width:2500px;
+    max-width:2500px;
+}
+.table-width-3000{
+    width:3000px;
+    max-width:3000px;
+}
+.defaultTable {
+    border-top:2px solid #797979 !important;
+    border-color: rgba(0, 0, 0, 0.33);
+}
+.defaultTable thead tr th{
+    background:#f5f5f5 !important;
+    border-color:rgba(0, 0, 0, 0.3);
+}
+.defaultTable tr th {
+    word-break: keep-all;
+    background:#f3f3f3;
+    text-align: center;
+}
+.defaultTable tbody tr td {
+    padding:15px 8px;
+    word-break: break-all;
+}
+.defaultTable tr td input[type="checkbox"] {
+    margin:0;
+    width:20px !important;
+    height:20px !important;
+    zoom:1 !important;
+    background:red;
+    cursor:pointer;
+    vertical-align: middle;
+}
+.defaultTable thead .glyphicon {
+    font-size:12px;
+}
+.defaultTable .button {
+    padding:8px 12px;
+    font-size:14px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 0 5px #b9b9b9;
+    font-weight: normal;
+}
+.defaultTable .button .delete {
+    background:#bd1818;
+}
+.defaultTable .button.add {
+    background: #546cc0;
+}
+.defaultTable .button.update {
+    background:#25925b;
+}
+.defaultTable .button.upload {
+    background:#6274d0;
+}
+.defaultTable .button.detail {
+    background:#099ead;
+}
+.defaultTable .button.disabled {
+    background:#8c8c8c !important;
+    cursor: default;
+}
+.defaultTable .button:hover {
+    opacity: 0.7;
+    color:inherit;
+    text-decoration: none;
+}
+.defaultTable .button.disabled:hover {
+    opacity: 1;
+}
+
+tr.is_chk {
+    background:#ffffe8 !important;
+}
