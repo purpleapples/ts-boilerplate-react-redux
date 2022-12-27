@@ -26,6 +26,7 @@ const Navbar = (): JSX.Element => {
       <Link to='/'>Home</Link>      
       <Link to='login'>Login</Link>
       <Link to='board'>board</Link>
+      <Link to='board/add'>register record</Link>
       
       {/* <Link to="/"> Home</Link>
       <Link to="/"> Home</Link> */}

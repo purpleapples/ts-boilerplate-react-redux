@@ -5,6 +5,7 @@ import {
   Input as _Input,
   InputProps,
 } from '@mui/material';
+import React from 'react';
 import { styled } from '@mui/material/styles';
 import { FC } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
@@ -55,4 +56,75 @@ const FormInput: FC<IFormInputProps> = ({ name, label, ...otherProps }) => {
   );
 };
 
+const FormTextarea: FC<IFormInputProps> = ({ name, label, ...otherProps }) => {
+  const {
+    control,
+    formState: { errors },
+  } = useFormContext();
+
+  return (
+    <Controller
+      control={control}
+      defaultValue=''
+      name={name}
+      render={({ field }) => (
+        <FormControl fullWidth sx={{ mb: 2 }}>
+          <Typography
+            variant='body2'
+            sx={{ color: '#2363eb', mb: 1, fontWeight: 500 }}
+          >
+            {label}
+          </Typography>
+          <Input
+            {...field}
+            fullWidth
+            disableUnderline
+            sx={{ borderRadius: '1rem' }}
+            error={!!errors[name]}
+            {...otherProps}
+          />
+          <FormHelperText error={!!errors[name]}>
+            {/* {errors[name] ? errors[name].message : ''} */}
+          </FormHelperText>
+        </FormControl>
+      )}
+    />
+  );
+};
+
+const FormSelect: FC<IFormInputProps> = ({ name, label, ...otherProps }) => {
+  const {
+    control,
+    formState: { errors },
+  } = useFormContext();
+
+  return (
+    <Controller
+      control={control}
+      defaultValue=''
+      name={name}
+      render={({ field }) => (
+        <FormControl fullWidth sx={{ mb: 2 }}>
+          <Typography
+            variant='body2'
+            sx={{ color: '#2363eb', mb: 1, fontWeight: 500 }}
+          >
+            {label}
+          </Typography>
+          <Input
+            {...field}
+            fullWidth
+            disableUnderline
+            sx={{ borderRadius: '1rem' }}
+            error={!!errors[name]}
+            {...otherProps}
+          />
+          <FormHelperText error={!!errors[name]}>
+            {/* {errors[name] ? errors[name].message : ''} */}
+          </FormHelperText>
+        </FormControl>
+      )}
+    />
+  );
+};
 export default FormInput;

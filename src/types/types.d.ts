@@ -26,6 +26,15 @@
     __v: number;
   }
   
+
+  export interface IBoard{
+    title : string;
+    content:string;
+    writer:string;
+    type:string;
+    create_dt:dateFns;
+    update_dt:dateFns;
+  }
   export interface IPostResponse {
     id: string;
     title: string;
