@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import { object, string, TypeOf } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import FormInput from '../components/FormInput';
+import {FormInput, FormTextarea} from '../components/FormInput';
 import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useRegisterBoardMutation } from '../apis/boardApi';
@@ -125,7 +125,7 @@ const RegisterBoardPage = () => {
           >
             <FormInput name='title' label='제목' />
             
-            <FormInput name='content' label='내용' type='textarea' />
+            <FormTextarea name='content' label='내용'/>
          
 
             <LoadingButton
